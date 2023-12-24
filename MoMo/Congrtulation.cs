@@ -17,7 +17,9 @@ namespace MoMo
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        
+
+        private void Congrtulation_Load(object sender, EventArgs e)
         {
 
         }

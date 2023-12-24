@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginPage));
             panel1 = new Panel();
-            link_Label = new LinkLabel();
+            toSignup = new LinkLabel();
             sinup_lapel = new Label();
             Pass_text = new TextBox();
             User_text = new TextBox();
@@ -41,7 +41,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(link_Label);
+            panel1.Controls.Add(toSignup);
             panel1.Controls.Add(sinup_lapel);
             panel1.Controls.Add(Pass_text);
             panel1.Controls.Add(User_text);
@@ -51,19 +51,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(259, 275);
             panel1.TabIndex = 5;
-            panel1.Paint += panel1_Paint_1;
             // 
-            // link_Label
+            // toSignup
             // 
-            link_Label.ActiveLinkColor = Color.FromArgb(64, 0, 64);
-            link_Label.AutoSize = true;
-            link_Label.Location = new Point(97, 217);
-            link_Label.Name = "link_Label";
-            link_Label.Size = new Size(78, 15);
-            link_Label.TabIndex = 7;
-            link_Label.TabStop = true;
-            link_Label.Text = "Go To SignUp";
-            link_Label.LinkClicked += link_Label_LinkClicked;
+            toSignup.ActiveLinkColor = Color.FromArgb(64, 0, 64);
+            toSignup.AutoSize = true;
+            toSignup.Location = new Point(97, 217);
+            toSignup.Name = "toSignup";
+            toSignup.Size = new Size(78, 15);
+            toSignup.TabIndex = 7;
+            toSignup.TabStop = true;
+            toSignup.Text = "Go To SignUp";
+            toSignup.LinkClicked += toSignup_LinkClicked_1;
             // 
             // sinup_lapel
             // 
@@ -84,7 +83,6 @@
             Pass_text.PlaceholderText = "Password";
             Pass_text.Size = new Size(238, 42);
             Pass_text.TabIndex = 3;
-            Pass_text.TextChanged += Pass_text_TextChanged;
             // 
             // User_text
             // 
@@ -138,7 +136,7 @@
         private TextBox Pass_text;
         private TextBox User_text;
         private Button login_btn;
-        private LinkLabel link_Label;
+        private LinkLabel toSignup;
         private Label sinup_lapel;
         private Button button1;
     }

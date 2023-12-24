@@ -58,7 +58,7 @@ namespace MoMo
 
             if (imagesList.Count > 0)
             {
-                pictureBox1.Image = imagesList[0];
+                alphabetImage.Image = imagesList[0];
             }
         }
 
@@ -82,18 +82,12 @@ namespace MoMo
             }
         }
         int currentImageIndex = 0;
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
         private void Next_Click(object sender, EventArgs e)
         {
             if (currentImageIndex <= 24)
             {
                 currentImageIndex++;
-                pictureBox1.Image = imagesList[currentImageIndex];
+                alphabetImage.Image = imagesList[currentImageIndex];
 
             }
             else
@@ -107,23 +101,18 @@ namespace MoMo
             if (currentImageIndex > 0)
             {
                 currentImageIndex--;
-                pictureBox1.Image = imagesList[currentImageIndex];
+                alphabetImage.Image = imagesList[currentImageIndex];
             }
             else
             {
 
-                pictureBox1.Image = imagesList[currentImageIndex];
+                alphabetImage.Image = imagesList[currentImageIndex];
             }
         }
 
         private void voice_Click(object sender, EventArgs e)
         {
             PlayAudio(audiosList[currentImageIndex]);
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void toFeatures_Click(object sender, EventArgs e)

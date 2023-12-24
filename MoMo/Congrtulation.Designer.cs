@@ -53,7 +53,7 @@
             label1.Size = new Size(68, 15);
             label1.TabIndex = 1;
             label1.Text = "Wonderfull";
-            label1.Click += label1_Click;
+           
             // 
             // Congrtulation
             // 
@@ -64,10 +64,13 @@
             ClientSize = new Size(284, 261);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            Location = new Point(100, 100);
             MaximumSize = new Size(300, 300);
+            MinimizeBox = false;
             MinimumSize = new Size(300, 300);
             Name = "Congrtulation";
             Text = "Congrtulation";
+            Load += Congrtulation_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

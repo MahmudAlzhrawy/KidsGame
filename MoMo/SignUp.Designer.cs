@@ -36,9 +36,9 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             aup_image = new Button();
-            pictureBox2 = new PictureBox();
+            toLogin = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)toLogin).BeginInit();
             SuspendLayout();
             // 
             // Sign_user_box
@@ -50,7 +50,6 @@
             Sign_user_box.PlaceholderText = "Enter Your Username";
             Sign_user_box.Size = new Size(237, 44);
             Sign_user_box.TabIndex = 0;
-            Sign_user_box.TextChanged += Sign_user_box_TextChanged;
             // 
             // Genbox
             // 
@@ -61,7 +60,7 @@
             Genbox.Name = "Genbox";
             Genbox.Size = new Size(142, 23);
             Genbox.TabIndex = 5;
-            Genbox.SelectedIndexChanged += Genbox_SelectedIndexChanged;
+            
             // 
             // label2
             // 
@@ -87,7 +86,6 @@
             Sign_pass_box.PlaceholderText = "Enter Your Password";
             Sign_pass_box.Size = new Size(237, 44);
             Sign_pass_box.TabIndex = 7;
-            Sign_pass_box.TextChanged += Sign_pass_box_TextChanged;
             // 
             // SingUp_btn
             // 
@@ -120,13 +118,13 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.AppWorkspace;
-            label1.Location = new Point(511, 33);
+            label1.Location = new Point(671, 80);
             label1.Name = "label1";
             label1.Padding = new Padding(5);
             label1.Size = new Size(82, 35);
             label1.TabIndex = 10;
             label1.Text = "Image:";
-            label1.Click += label1_Click;
+            
             // 
             // aup_image
             // 
@@ -140,16 +138,16 @@
             aup_image.UseVisualStyleBackColor = false;
             aup_image.Click += aup_image_Click;
             // 
-            // pictureBox2
+            // toLogin
             // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Image = Properties.Resources.home3;
-            pictureBox2.Location = new Point(6, 0);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(65, 68);
-            pictureBox2.TabIndex = 12;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
+            toLogin.BackColor = Color.Transparent;
+            toLogin.Image = Properties.Resources.home3;
+            toLogin.Location = new Point(6, 0);
+            toLogin.Name = "toLogin";
+            toLogin.Size = new Size(65, 68);
+            toLogin.TabIndex = 12;
+            toLogin.TabStop = false;
+            toLogin.Click += toLogin_Click;
             // 
             // SignUp
             // 
@@ -158,7 +156,7 @@
             BackgroundImage = Properties.Resources.MoMo;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(908, 488);
-            Controls.Add(pictureBox2);
+            Controls.Add(toLogin);
             Controls.Add(aup_image);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
@@ -173,7 +171,7 @@
             Text = "MoMo";
             Load += SignUp_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)toLogin).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -188,6 +186,6 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Button aup_image;
-        private PictureBox pictureBox2;
+        private PictureBox toLogin;
     }
 }

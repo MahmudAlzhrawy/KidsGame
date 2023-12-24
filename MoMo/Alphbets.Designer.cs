@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Alphbets));
-            pictureBox1 = new PictureBox();
+            alphabetImage = new PictureBox();
             Next = new PictureBox();
             prev = new PictureBox();
             voice = new PictureBox();
             toFeatures = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)alphabetImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Next).BeginInit();
             ((System.ComponentModel.ISupportInitialize)prev).BeginInit();
             ((System.ComponentModel.ISupportInitialize)voice).BeginInit();
             ((System.ComponentModel.ISupportInitialize)toFeatures).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // alphabetImage
             // 
-            pictureBox1.BackColor = Color.OldLace;
-            pictureBox1.Location = new Point(235, 57);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(456, 344);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            alphabetImage.BackColor = Color.OldLace;
+            alphabetImage.Location = new Point(235, 57);
+            alphabetImage.Name = "alphabetImage";
+            alphabetImage.Size = new Size(456, 344);
+            alphabetImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            alphabetImage.TabIndex = 0;
+            alphabetImage.TabStop = false;
+          //  alphabetImage.Click += alphabetImage_Click;
             // 
             // Next
             // 
@@ -111,14 +111,14 @@
             Controls.Add(voice);
             Controls.Add(prev);
             Controls.Add(Next);
-            Controls.Add(pictureBox1);
+            Controls.Add(alphabetImage);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(924, 527);
             MinimumSize = new Size(924, 527);
             Name = "Alphbets";
             Text = "MoMo";
             Load += Alphbets_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)alphabetImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)Next).EndInit();
             ((System.ComponentModel.ISupportInitialize)prev).EndInit();
             ((System.ComponentModel.ISupportInitialize)voice).EndInit();
@@ -127,7 +127,7 @@
         }
 
         #endregion
-        private PictureBox pictureBox1;
+        private PictureBox alphabetImage;
         private Button button3;
         private PictureBox Next;
         private PictureBox pictureBox3;

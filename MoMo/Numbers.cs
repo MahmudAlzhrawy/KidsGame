@@ -23,11 +23,6 @@ namespace MoMo
             this.userName = userName;
         }
         AppDbContext db = new AppDbContext();
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private List<Number> GetNumbers()
         {
             return db.Numbers.ToList();

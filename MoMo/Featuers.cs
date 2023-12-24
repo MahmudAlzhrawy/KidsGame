@@ -18,20 +18,7 @@ namespace MoMo
             InitializeComponent();
             userName = userFromLogin;
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            loginPage mainPage = new loginPage();
-            this.Close();
-            mainPage.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void toQuestions_Click(object sender, EventArgs e)
         {
             Questions question = new Questions(userName);
             this.Close();
@@ -43,46 +30,28 @@ namespace MoMo
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void toAlphabet_Click(object sender, EventArgs e)
         {
             Alphbets Alphbet = new Alphbets(userName);
             Alphbet.Show();
             this.Close();
         }
-
-        private void lblF_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void button3_Click(object sender, EventArgs e)
+        private void toNumbers_Click(object sender, EventArgs e)
         {
             Numbers numbers = new Numbers(userName);
             numbers.Show();
             this.Close();
         }
-
-        /*private void button4_Click_1(object sender, EventArgs e)
-        {
-            Settings setting = new Settings(userName);
-            setting.ShowDialog();
-        }*/
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
+        private void pictureBox_Logout_Click(object sender, EventArgs e)
         {
             loginPage mainPage = new loginPage();
             this.Close();
             mainPage.Show();
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
-        {
+      
 
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void pictureBox_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

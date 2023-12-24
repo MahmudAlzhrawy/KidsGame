@@ -29,65 +29,65 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Featuers));
-            button1 = new Button();
-            button2 = new Button();
-            Nums = new Button();
-            pictureBox1 = new PictureBox();
+            toAlphabet = new Button();
+            toQuestions = new Button();
+            toNumbers = new Button();
+            pictureBox_Logout = new PictureBox();
             pictureBox_exit = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_Logout).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_exit).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // toAlphabet
             // 
-            button1.BackgroundImage = Properties.Resources.MoMo32;
-            button1.Font = new Font("Akhbar MT", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.WhiteSmoke;
-            button1.Location = new Point(107, 214);
-            button1.Name = "button1";
-            button1.Size = new Size(150, 47);
-            button1.TabIndex = 0;
-            button1.Text = "Learn Alphabet ";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            toAlphabet.BackgroundImage = Properties.Resources.MoMo32;
+            toAlphabet.Font = new Font("Akhbar MT", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            toAlphabet.ForeColor = Color.WhiteSmoke;
+            toAlphabet.Location = new Point(107, 214);
+            toAlphabet.Name = "toAlphabet";
+            toAlphabet.Size = new Size(150, 47);
+            toAlphabet.TabIndex = 0;
+            toAlphabet.Text = "Learn Alphabet ";
+            toAlphabet.UseVisualStyleBackColor = true;
+            toAlphabet.Click += toAlphabet_Click;
             // 
-            // button2
+            // toQuestions
             // 
-            button2.BackColor = Color.Transparent;
-            button2.BackgroundImage = Properties.Resources.MoMo33;
-            button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.WhiteSmoke;
-            button2.Location = new Point(334, 42);
-            button2.Name = "button2";
-            button2.Size = new Size(150, 48);
-            button2.TabIndex = 1;
-            button2.Text = "Questions";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            toQuestions.BackColor = Color.Transparent;
+            toQuestions.BackgroundImage = Properties.Resources.MoMo33;
+            toQuestions.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            toQuestions.ForeColor = Color.WhiteSmoke;
+            toQuestions.Location = new Point(334, 42);
+            toQuestions.Name = "toQuestions";
+            toQuestions.Size = new Size(150, 48);
+            toQuestions.TabIndex = 1;
+            toQuestions.Text = "Questions";
+            toQuestions.UseVisualStyleBackColor = false;
+            toQuestions.Click += toQuestions_Click;
             // 
-            // Nums
+            // toNumbers
             // 
-            Nums.BackgroundImage = Properties.Resources.MoMo3;
-            Nums.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Nums.ForeColor = Color.WhiteSmoke;
-            Nums.Location = new Point(675, 214);
-            Nums.Name = "Nums";
-            Nums.Size = new Size(150, 48);
-            Nums.TabIndex = 2;
-            Nums.Text = "Learn Numbers";
-            Nums.UseVisualStyleBackColor = true;
-            Nums.Click += button3_Click;
+            toNumbers.BackgroundImage = Properties.Resources.MoMo3;
+            toNumbers.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            toNumbers.ForeColor = Color.WhiteSmoke;
+            toNumbers.Location = new Point(675, 214);
+            toNumbers.Name = "toNumbers";
+            toNumbers.Size = new Size(150, 48);
+            toNumbers.TabIndex = 2;
+            toNumbers.Text = "Learn Numbers";
+            toNumbers.UseVisualStyleBackColor = true;
+            toNumbers.Click += toNumbers_Click;
             // 
-            // pictureBox1
+            // pictureBox_Logout
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(41, 48);
-            pictureBox1.TabIndex = 9;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click_1;
+            pictureBox_Logout.BackColor = Color.Transparent;
+            pictureBox_Logout.Image = (Image)resources.GetObject("pictureBox_Logout.Image");
+            pictureBox_Logout.Location = new Point(12, 4);
+            pictureBox_Logout.Name = "pictureBox_Logout";
+            pictureBox_Logout.Size = new Size(41, 48);
+            pictureBox_Logout.TabIndex = 9;
+            pictureBox_Logout.TabStop = false;
+            pictureBox_Logout.Click += pictureBox_Logout_Click;
             // 
             // pictureBox_exit
             // 
@@ -98,7 +98,7 @@
             pictureBox_exit.Size = new Size(61, 73);
             pictureBox_exit.TabIndex = 10;
             pictureBox_exit.TabStop = false;
-            pictureBox_exit.Click += pictureBox2_Click;
+            pictureBox_exit.Click += pictureBox_exit_Click;
             // 
             // Featuers
             // 
@@ -108,10 +108,10 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(924, 527);
             Controls.Add(pictureBox_exit);
-            Controls.Add(pictureBox1);
-            Controls.Add(Nums);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(pictureBox_Logout);
+            Controls.Add(toNumbers);
+            Controls.Add(toQuestions);
+            Controls.Add(toAlphabet);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(924, 527);
@@ -119,17 +119,17 @@
             Name = "Featuers";
             Text = "MoMo";
             Load += Featuers_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_Logout).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_exit).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button Nums;
-        private PictureBox pictureBox1;
+        private Button toAlphabet;
+        private Button toQuestions;
+        private Button toNumbers;
+        private PictureBox pictureBox_Logout;
         private PictureBox pictureBox_exit;
     }
 }

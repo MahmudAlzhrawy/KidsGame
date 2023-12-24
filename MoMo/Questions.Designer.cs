@@ -29,63 +29,63 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Questions));
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            option1 = new Button();
+            option2 = new Button();
+            option3 = new Button();
+            option4 = new Button();
             TextLable = new Label();
             Scorelbl = new Label();
             pictureBox_Home = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Home).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // option1
             // 
-            button1.BackColor = Color.Transparent;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(272, 229);
-            button1.Name = "button1";
-            button1.Size = new Size(78, 42);
-            button1.TabIndex = 28;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            option1.BackColor = Color.Transparent;
+            option1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            option1.Location = new Point(272, 229);
+            option1.Name = "option1";
+            option1.Size = new Size(78, 42);
+            option1.TabIndex = 28;
+            option1.Text = "option";
+            option1.UseVisualStyleBackColor = false;
+            option1.Click += option1_Click;
             // 
-            // button2
+            // option2
             // 
-            button2.BackColor = Color.Transparent;
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(595, 306);
-            button2.Name = "button2";
-            button2.Size = new Size(73, 39);
-            button2.TabIndex = 29;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            option2.BackColor = Color.Transparent;
+            option2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            option2.Location = new Point(595, 306);
+            option2.Name = "option2";
+            option2.Size = new Size(73, 39);
+            option2.TabIndex = 29;
+            option2.Text = "option";
+            option2.UseVisualStyleBackColor = false;
+            option2.Click += option2_Click;
             // 
-            // button3
+            // option3
             // 
-            button3.BackColor = Color.Transparent;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(595, 229);
-            button3.Name = "button3";
-            button3.Size = new Size(73, 42);
-            button3.TabIndex = 30;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            option3.BackColor = Color.Transparent;
+            option3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            option3.Location = new Point(595, 229);
+            option3.Name = "option3";
+            option3.Size = new Size(73, 42);
+            option3.TabIndex = 30;
+            option3.Text = "option3";
+            option3.UseVisualStyleBackColor = false;
+            option3.Click += option3_Click;
             // 
-            // button4
+            // option4
             // 
-            button4.BackColor = Color.Transparent;
-            button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(272, 306);
-            button4.Name = "button4";
-            button4.Size = new Size(78, 39);
-            button4.TabIndex = 31;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            option4.BackColor = Color.Transparent;
+            option4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            option4.Location = new Point(272, 306);
+            option4.Name = "option4";
+            option4.Size = new Size(78, 39);
+            option4.TabIndex = 31;
+            option4.Text = "option";
+            option4.UseVisualStyleBackColor = false;
+            option4.Click += option4_Click;
             // 
             // TextLable
             // 
@@ -96,7 +96,6 @@
             TextLable.Size = new Size(540, 73);
             TextLable.TabIndex = 37;
             TextLable.Text = "Question";
-            TextLable.Click += label1_Click;
             // 
             // Scorelbl
             // 
@@ -107,7 +106,6 @@
             Scorelbl.Size = new Size(163, 44);
             Scorelbl.TabIndex = 38;
             Scorelbl.Text = "Score:";
-            Scorelbl.Click += Scorelbl_Click;
             // 
             // pictureBox_Home
             // 
@@ -131,10 +129,10 @@
             Controls.Add(pictureBox_Home);
             Controls.Add(Scorelbl);
             Controls.Add(TextLable);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(option4);
+            Controls.Add(option3);
+            Controls.Add(option2);
+            Controls.Add(option1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(943, 558);
@@ -147,10 +145,10 @@
         }
 
         #endregion
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button option1;
+        private Button option2;
+        private Button option3;
+        private Button option4;
         private Label TextLable;
         private Label Scorelbl;
         private PictureBox pictureBox_Home;
