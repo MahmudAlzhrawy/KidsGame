@@ -15,6 +15,7 @@ namespace MoMo
 {
     public partial class Questions : Form
     {
+        // Fields to store user information, question index, and score
         String User;
         int i = 0;
         int Score;
@@ -29,6 +30,7 @@ namespace MoMo
 
         private void LoadQuestion()
         {
+            // Query to retrieve user specific questions and answers
             var userQuestions = from result in db.Results
                                 join question in db.Questions on result.QuestionId equals question.QuestionId
                                 where result.User_name == User
@@ -41,13 +43,15 @@ namespace MoMo
                                     Option3 = question.option_3,
                                     Option4 = question.option_4,
                                 };
+            // Display the current score        
             Scorelbl.Text = $"Score:{this.Score}";
 
-            // يتم تحميل السؤال الحالي من نتائج الاستعلام
+            // Retrieve the current question from the query result
             var Question = userQuestions.Skip(i).FirstOrDefault();
 
             if (Question != null)
             {
+                // Display the question text
                 string displayText = $"{i + 1}-{Question.QuestionText}\n";
 
                 TextLable.Text = displayText;
@@ -60,7 +64,7 @@ namespace MoMo
                         Question.Answer,
                         Question.Option4
                     };
-
+                // Randomize and display answer options
                 answers = answers.OrderBy(x => Guid.NewGuid()).ToList();
                 option1.Text = answers[0];
                 option2.Text = answers[1];
@@ -97,10 +101,10 @@ namespace MoMo
             var selectedButton = (Button)sender;
             string selectedAnswer = selectedButton.Text;
 
-            // استدعاء الإجابة للسؤال الحالي
+            // اThe answer to the current question will be called
             string correctAnswer = Question.Answer;
 
-            // مقارنة القيمة المختارة مع الإجابة الصحيحة
+            // Compare the chosen value with the correct answer
             var selectedUser = db.Users.Where(a => a.user_name == User).FirstOrDefault();
             if (selectedAnswer == correctAnswer)
             {
@@ -176,10 +180,10 @@ namespace MoMo
             var selectedButton = (Button)sender;
             string selectedAnswer = selectedButton.Text;
 
-            // استدعاء الإجابة للسؤال الحالي
+            // The answer to the current question will be called
             string correctAnswer = Question.Answer;
 
-            // مقارنة القيمة المختارة مع الإجابة الصحيحة
+            // Compare the chosen value with the correct answer
             var selectedUser = db.Users.Where(a => a.user_name == User).FirstOrDefault();
             if (selectedAnswer == correctAnswer)
             {
@@ -256,10 +260,10 @@ namespace MoMo
             var selectedButton = (Button)sender;
             string selectedAnswer = selectedButton.Text;
 
-            // استدعاء الإجابة للسؤال الحالي
+            // The answer to the current question will be called
             string correctAnswer = Question.Answer;
 
-            // مقارنة القيمة المختارة مع الإجابة الصحيحة
+            // Compare the chosen value with the correct answer
             var selectedUser = db.Users.Where(a => a.user_name == User).FirstOrDefault();
             if (selectedAnswer == correctAnswer)
             {
@@ -335,10 +339,10 @@ namespace MoMo
             var selectedButton = (Button)sender;
             string selectedAnswer = selectedButton.Text;
 
-            // استدعاء الإجابة للسؤال الحالي
+            // The answer to the current question will be called
             string correctAnswer = Question.Answer;
 
-            // مقارنة القيمة المختارة مع الإجابة الصحيحة
+            // Compare the chosen value with the correct answer
             var selectedUser = db.Users.Where(a => a.user_name == User).FirstOrDefault();
             if (selectedAnswer == correctAnswer)
             {

@@ -31,7 +31,7 @@ namespace MoMo
         List<byte[]> audiosList = new List<byte[]>();
         private void Numbers_Load(object sender, EventArgs e)
         {
-           // Console.WriteLine(images.Count);
+            // Load images and audio data from the database into lists
             List<Number> numbers = GetNumbers();
             foreach (Number num in numbers)
             {
@@ -55,6 +55,7 @@ namespace MoMo
                 pictureBox1.Image = images[0];
             }
         }
+        // Method to play audio based on the provided audio data
         private void PlayAudio(byte[] audioData)
         {
 
@@ -66,6 +67,7 @@ namespace MoMo
             waveOut.Init(waveStream);
             waveOut.Play();
         }
+        // Method to convert a byte array to an Image
         private Image byteArrayToImage(byte[] byteArrayIn)
         {
             using (MemoryStream ms = new MemoryStream(byteArrayIn))

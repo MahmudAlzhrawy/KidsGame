@@ -20,7 +20,8 @@ namespace MoMo
         }
         AppDbContext db = new AppDbContext();
         private void SingUp_btn_Click(object sender, EventArgs e)
-        {
+        { 
+            // Check if the entered username already exists in the database
             var check = db.Users.Where(u => u.user_name == Sign_user_box.Text).FirstOrDefault();
             if (check != null)
             {
@@ -28,6 +29,7 @@ namespace MoMo
             }
             else
             {
+                // Create a new user object with the entered details
                 User newUser = new User()
                 {
                     user_name = Sign_user_box.Text,
@@ -36,6 +38,7 @@ namespace MoMo
                     Score = 0,
 
                 };
+                // Set the user's password
                 newUser.SetPassword(Sign_pass_box.Text);
                 if (!string.IsNullOrEmpty(Sign_user_box.Text) && !string.IsNullOrEmpty(Sign_pass_box.Text) && Genbox.SelectedIndex >= 0)
                 {
@@ -45,10 +48,12 @@ namespace MoMo
                         List<Question> allQuestions = db.Questions.ToList();
                         if (allQuestions.Count >= 15)
                         {
+                            // Select 15 random questions from the database
                             Random rand = new Random();
                             List<Question> selectedQuestions = allQuestions.OrderBy(q => rand.Next()).Take(15).ToList();
                             foreach (Question question in selectedQuestions)
                             {
+                                // Add selected questions to the user's results
                                 Result result = new Result()
                                 {
                                     User_name = Sign_user_box.Text,
@@ -58,8 +63,9 @@ namespace MoMo
                             }
 
                         }
+                        // Set the image path and save changes to the database
                         string newpath = Environment.CurrentDirectory + newUser.user_name + ".jpg";
-                        // File.Copy(imagepath, newpath);
+                        
                         newUser.Image = newpath;
                         db.SaveChanges();
                         MessageBox.Show($"Successfully Added", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -80,9 +86,11 @@ namespace MoMo
         }
         private void aup_image_Click(object sender, EventArgs e)
         {
+            // Open a file dialog to select an image
             OpenFileDialog Dialog = new OpenFileDialog();
             if (Dialog.ShowDialog() == DialogResult.OK)
             {
+                // Set the image path and display the selected image
                 imagePath = Dialog.FileName;
                 pictureBox1.ImageLocation = Dialog.FileName;
             }

@@ -40,6 +40,7 @@ namespace MoMo
         private void Alphbets_Load(object sender, EventArgs e)
         {
             List<Alphabet> alphabets = GetAlphabets();
+            // Load images and audio data from the database into lists
             foreach (Alphabet alphabet in alphabets)
             {
                 try
@@ -61,7 +62,7 @@ namespace MoMo
                 alphabetImage.Image = imagesList[0];
             }
         }
-
+        // Method to play audio based on the provided audio data
         private void PlayAudio(byte[] audioData)
         {
 
@@ -73,6 +74,7 @@ namespace MoMo
             waveOut.Init(waveStream);
             waveOut.Play();
         }
+        // Method to convert a byte array to an Image
         private Image byteArrayToImage(byte[] byteArrayIn)
         {
             using (MemoryStream ms = new MemoryStream(byteArrayIn))
